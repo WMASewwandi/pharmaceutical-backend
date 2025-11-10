@@ -21,6 +21,7 @@ import PrecisionManufacturingIcon from '@mui/icons-material/PrecisionManufacturi
 import FastfoodIcon from '@mui/icons-material/Fastfood';
 import CallIcon from '@mui/icons-material/Call';
 import People from '@mui/icons-material/People';
+import SupportAgentIcon from '@mui/icons-material/SupportAgent';
 
 
 export const getSidebarData = (IsGarmentSystem) => {
@@ -37,6 +38,7 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "Dashboard", path: "/dashboard/main", categoryId: 39, isAvailable: true },
                 { title: "Dashboard", path: "/dashboard/pos", categoryId: 60, isAvailable: true },
                 { title: "Dashboard", path: "/dashboard/reservation", categoryId: 61, isAvailable: true },
+                { title: "Help Desk Dashboard", path: "/dashboard/help-desk", categoryId: 108, isAvailable: true },
             ],
         },
         {
@@ -100,6 +102,7 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "Employee", path: "/master/Employee/", categoryId: 93, isAvailable: true },
                 { title: "Combo Meal", path: "/master/combo/", categoryId: 94, isAvailable: true },
                 { title: "DBR Machine", path: "/master/dbr-machine/", categoryId: 100, isAvailable: true },
+                { title: "Projects", path: "/master/projects/", categoryId: 107, isAvailable: true },
             ],
         },
         {
@@ -298,6 +301,20 @@ export const getSidebarData = (IsGarmentSystem) => {
             { title: "Contact", path: "/crm/contact/", categoryId: 102, isAvailable: true },
             { title: "Account", path: "/crm/account/", categoryId: 103, isAvailable: true },
             
+        ],
+    });
+
+    sidebarData.push({
+        title: "Help Desk",
+        path: "/help-desk/help-desk/",
+        icon: <SupportAgentIcon />,
+        iconClosed: <ArrowRight />,
+        iconOpened: <ArrowDown />,
+        ModuleId: 19,
+        IsAvailable: true,
+            subNav: [
+            { title: "Tickets", path: "/help-desk/tickets/", categoryId: 105, isAvailable: true },
+            { title: "Categories", path: "/help-desk/categories/", categoryId: 106, isAvailable: true },
         ],
     });
 

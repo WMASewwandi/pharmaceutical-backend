@@ -36,6 +36,8 @@ export const getModule = (type) => {
       return "Contact";
       case 18:
       return "CRM";
+      case 19:
+      return "Help Desk";
     default:
       return "N/A";
   }
