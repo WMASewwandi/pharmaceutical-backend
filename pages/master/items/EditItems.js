@@ -162,6 +162,8 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
       return;
     }
 
+    
+
     const formData = new FormData();
 
     formData.append("Id", values.Id);
@@ -174,7 +176,9 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     formData.append("SubCategoryId", values.SubCategoryId);
     formData.append("Supplier", values.Supplier);
     formData.append("UOM", values.UOM);
-    formData.append("Barcode", values.Barcode);
+    if (values.Barcode !== undefined && values.Barcode !== null && values.Barcode !== "") {
+      formData.append("Barcode", values.Barcode);
+    }
     formData.append("CostAccount", values.CostAccount ? values.CostAccount : "");
     formData.append("AssetsAccount", values.AssetsAccount ? values.AssetsAccount : "");
     formData.append("IncomeAccount", values.IncomeAccount ? values.IncomeAccount : "");

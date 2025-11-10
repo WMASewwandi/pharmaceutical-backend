@@ -183,7 +183,6 @@ export default function AddItems({ fetchItems, isPOSSystem, uoms, isGarmentSyste
       toast.warning("Please enter the average price for web view.");
       return;
     }
-
     const formData = new FormData();
 
     formData.append("Name", values.Name);
@@ -195,7 +194,9 @@ export default function AddItems({ fetchItems, isPOSSystem, uoms, isGarmentSyste
     formData.append("SubCategoryId", values.SubCategoryId);
     formData.append("Supplier", values.Supplier);
     formData.append("UOM", values.UOM);
-    formData.append("Barcode", values.Barcode);
+    if (values.Barcode !== undefined && values.Barcode !== null && values.Barcode !== "") {
+      formData.append("Barcode", values.Barcode);
+    }
     formData.append("CostAccount", values.CostAccount ? values.CostAccount : "");
     formData.append("AssetsAccount", values.AssetsAccount ? values.AssetsAccount : "");
     formData.append("IncomeAccount", values.IncomeAccount ? values.IncomeAccount : "");
