@@ -174,7 +174,7 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     formData.append("SubCategoryId", values.SubCategoryId);
     formData.append("Supplier", values.Supplier);
     formData.append("UOM", values.UOM);
-    formData.append("Barcode", values.Barcode ? values.Barcode : null);
+    formData.append("Barcode", values.Barcode);
     formData.append("CostAccount", values.CostAccount ? values.CostAccount : "");
     formData.append("AssetsAccount", values.AssetsAccount ? values.AssetsAccount : "");
     formData.append("IncomeAccount", values.IncomeAccount ? values.IncomeAccount : "");
@@ -231,7 +231,7 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
               ReorderLevel: item.reorderLevel || null,
               Supplier: item.supplier || "",
               UOM: item.uom || "",
-              Barcode: item.barcode || "",
+              Barcode: item.barcode || null,
               CostAccount: item.costAccount || null,
               AssetsAccount: item.assetsAccount || null,
               IncomeAccount: item.incomeAccount || null,

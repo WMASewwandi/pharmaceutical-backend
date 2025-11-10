@@ -195,7 +195,7 @@ export default function AddItems({ fetchItems, isPOSSystem, uoms, isGarmentSyste
     formData.append("SubCategoryId", values.SubCategoryId);
     formData.append("Supplier", values.Supplier);
     formData.append("UOM", values.UOM);
-    formData.append("Barcode", values.Barcode ? values.Barcode : null);
+    formData.append("Barcode", values.Barcode);
     formData.append("CostAccount", values.CostAccount ? values.CostAccount : "");
     formData.append("AssetsAccount", values.AssetsAccount ? values.AssetsAccount : "");
     formData.append("IncomeAccount", values.IncomeAccount ? values.IncomeAccount : "");
@@ -249,7 +249,7 @@ export default function AddItems({ fetchItems, isPOSSystem, uoms, isGarmentSyste
               SubCategoryId: "",
               Supplier: "",
               UOM: "",
-              Barcode: "",
+              Barcode: null,
               CostAccount: null,
               AssetsAccount: null,
               IncomeAccount: null,
