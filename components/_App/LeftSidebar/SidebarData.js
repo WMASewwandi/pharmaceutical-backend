@@ -22,6 +22,7 @@ import FastfoodIcon from '@mui/icons-material/Fastfood';
 import CallIcon from '@mui/icons-material/Call';
 import People from '@mui/icons-material/People';
 import SupportAgentIcon from '@mui/icons-material/SupportAgent';
+import StorefrontIcon from '@mui/icons-material/Storefront';
 
 
 export const getSidebarData = (IsGarmentSystem) => {
@@ -98,11 +99,23 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "Kitchen", path: "/master/kitchen/", categoryId: 87, isAvailable: true },
                 { title: "Menu List", path: "/master/menu-list/", categoryId: 88, isAvailable: true },
                 { title: "Dinning Table", path: "/master/table/", categoryId: 89, isAvailable: true },
-                { title: "Steward", path: "/master/steward/", categoryId: 90, isAvailable: true },                
+                { title: "Steward", path: "/master/steward/", categoryId: 90, isAvailable: true },
                 { title: "Employee", path: "/master/Employee/", categoryId: 93, isAvailable: true },
                 { title: "Combo Meal", path: "/master/combo/", categoryId: 94, isAvailable: true },
                 { title: "DBR Machine", path: "/master/dbr-machine/", categoryId: 100, isAvailable: true },
                 { title: "Projects", path: "/master/projects/", categoryId: 107, isAvailable: true },
+            ],
+        },
+        {
+            title: "ECommerce",
+            path: "/ecom/ecom/",
+            icon: <StorefrontIcon />,
+            iconClosed: <ArrowRight />,
+            iconOpened: <ArrowDown />,
+            ModuleId: 20,
+            IsAvailable: true,
+            subNav: [
+                { title: "Online Orders", path: "/ecom/orders/", categoryId: 108, isAvailable: true },
             ],
         },
         {
@@ -300,7 +313,7 @@ export const getSidebarData = (IsGarmentSystem) => {
             { title: "Leads", path: "/crm/lead/", categoryId: 101, isAvailable: true },
             { title: "Contact", path: "/crm/contact/", categoryId: 102, isAvailable: true },
             { title: "Account", path: "/crm/account/", categoryId: 103, isAvailable: true },
-            
+
         ],
     });
 
@@ -312,7 +325,7 @@ export const getSidebarData = (IsGarmentSystem) => {
         iconOpened: <ArrowDown />,
         ModuleId: 19,
         IsAvailable: true,
-            subNav: [
+        subNav: [
             { title: "Tickets", path: "/help-desk/tickets/", categoryId: 105, isAvailable: true },
             { title: "Categories", path: "/help-desk/categories/", categoryId: 106, isAvailable: true },
         ],
@@ -335,7 +348,7 @@ export const getSidebarData = (IsGarmentSystem) => {
             { title: "Company", path: "/administrator/company/", categoryId: 36, isAvailable: true },
             { title: "Fiscal Periods", path: "/administrator/fiscal-period/", categoryId: 37, isAvailable: true },
             { title: "Terminal", path: "/administrator/terminal/", categoryId: 38, isAvailable: true },
-             { title: "Printers", path: "/administrator/Printers/", categoryId: 99, isAvailable: true },
+            { title: "Printers", path: "/administrator/Printers/", categoryId: 99, isAvailable: true },
         ],
     });
 
