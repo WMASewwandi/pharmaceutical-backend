@@ -193,6 +193,7 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "POS Shift", path: "/sales/pos-shift/", categoryId: 95, isAvailable: true },
                 { title: "POS Day End", path: "/sales/pos-dayend/", categoryId: 96, isAvailable: true },
                 { title: "Shift Summary", path: "/sales/summary/", categoryId: 104, isAvailable: true },
+                { title: "Cash In/Out", path: "/sales/cash-in-out/", categoryId: 117, isAvailable: true },
             ],
         },
         {
@@ -310,10 +311,14 @@ export const getSidebarData = (IsGarmentSystem) => {
         ModuleId: 18,
         IsAvailable: true,
         subNav: [
-            { title: "Leads", path: "/crm/lead/", categoryId: 101, isAvailable: true },
-            { title: "Contact", path: "/crm/contact/", categoryId: 102, isAvailable: true },
-            { title: "Account", path: "/crm/account/", categoryId: 103, isAvailable: true },
-
+            { title: "Kanban", path: "/crm/kanban/", categoryId: 115, isAvailable: true },
+            { title: "Leads", path: "/crm/leads/", categoryId: 116, isAvailable: true },            
+            { title: "Accounts", path: "/crm/accounts/", categoryId: 109, isAvailable: true },  
+            { title: "Contacts", path: "/crm/contacts/", categoryId: 110, isAvailable: true },  
+            { title: "Opportunities", path: "/crm/opportunities/", categoryId: 111, isAvailable: true },                     
+            { title: "Activities", path: "/crm/activities/", categoryId: 112, isAvailable: true },                     
+            { title: "Quotes", path: "/crm/quotes/", categoryId: 113, isAvailable: true },                     
+            { title: "Reports", path: "/crm/reports/", categoryId: 114, isAvailable: true },                     
         ],
     });
 

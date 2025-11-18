@@ -6,7 +6,8 @@ const usePaginatedFetch = (
   endpoint,
   initialSearch = "",
   initialPageSize = 10,
-  initialIsCurrentDate = true
+  initialIsCurrentDate = true,
+  shouldIncludeIsCurrentDateParam = true
 ) => {
   const [data, setData] = useState([]);
   const [totalCount, setTotalCount] = useState(0);
@@ -20,7 +21,12 @@ const usePaginatedFetch = (
     try {
       const token = localStorage.getItem("token");
       const skip = (pageNum - 1) * size;
-      const query = `${BASE_URL}/${endpoint}?SkipCount=${skip}&MaxResultCount=${size}&Search=${term || "null"}&isCurrentDate=${isTodayOnly}`;
+      const searchParam = term ? encodeURIComponent(term) : "null";
+      let query = `${BASE_URL}/${endpoint}?SkipCount=${skip}&MaxResultCount=${size}&Search=${searchParam}`;
+
+      if (shouldIncludeIsCurrentDateParam) {
+        query += `&isCurrentDate=${isTodayOnly}`;
+      }
 
       const response = await fetch(query, {
         method: "GET",
