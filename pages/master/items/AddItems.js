@@ -205,7 +205,7 @@ export default function AddItems({ fetchItems, isPOSSystem, uoms, isGarmentSyste
     formData.append("HasSerialNumbers", values.HasSerialNumbers);
     formData.append("IsWebView", values.IsWebView);
     formData.append("ProductImage", selectedFile ? selectedFile : null);
-    formData.append("Description", values.Description);
+    formData.append("Description", values.Description ?? null);
 
     fetch(`${BASE_URL}/Items/CreateItems`, {
       method: "POST",
