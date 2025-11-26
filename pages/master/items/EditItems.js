@@ -185,7 +185,7 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     formData.append("HasSerialNumbers", values.HasSerialNumbers);
     formData.append("IsWebView", values.IsWebView);
     formData.append("ProductImage", selectedFile ? selectedFile : null);
-    formData.append("Description", values.Description ?? null);
+    formData.append("Description", values.Description && values.Description.trim() !== "" ? values.Description : null);
 
     fetch(`${BASE_URL}/Items/UpdateItems`, {
       method: "POST",
