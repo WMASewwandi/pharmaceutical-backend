@@ -160,9 +160,7 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     if (values.IsWebView && values.AveragePrice === null) {
       toast.warning("Please enter the average price for web view.");
       return;
-    }
-
-    
+    }    
 
     const formData = new FormData();
 
