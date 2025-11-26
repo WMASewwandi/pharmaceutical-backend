@@ -9,6 +9,7 @@ import {
     Folder as FolderIcon,
     DesignServices as DesignIcon,
     AttachMoney,
+    AssignmentTurnedIn as ProjectIcon,
 } from "@mui/icons-material";
 import ReceiptIcon from '@mui/icons-material/Receipt';
 import InventoryIcon from '@mui/icons-material/Inventory';
@@ -40,6 +41,24 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "Dashboard", path: "/dashboard/pos", categoryId: 60, isAvailable: true },
                 { title: "Dashboard", path: "/dashboard/reservation", categoryId: 61, isAvailable: true },
                 { title: "Help Desk Dashboard", path: "/dashboard/help-desk", categoryId: 108, isAvailable: true },
+            ],
+        },
+        {
+            title: "Project Management",
+            path: "/pmo/dashboard",
+            icon: <ProjectIcon />,
+            iconClosed: <ArrowRight />,
+            iconOpened: <ArrowDown />,
+            ModuleId: 21,
+            IsAvailable: true,
+            subNav: [
+                { title: "Dashboard", path: "/pmo/dashboard", categoryId: 119, isAvailable: true },
+                { title: "Projects", path: "/pmo/projects", categoryId: 120, isAvailable: true },
+                { title: "Tasks", path: "/pmo/tasks", categoryId: 121, isAvailable: true },
+                { title: "Team", path: "/pmo/team", categoryId: 122, isAvailable: true },
+                { title: "Timeline", path: "/pmo/timeline", categoryId: 123, isAvailable: true },
+                { title: "Financials", path: "/pmo/financials", categoryId: 124, isAvailable: true },
+                { title: "Reports", path: "/pmo/reports", categoryId: 125, isAvailable: true },
             ],
         },
         {
@@ -103,7 +122,7 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "Employee", path: "/master/Employee/", categoryId: 93, isAvailable: true },
                 { title: "Combo Meal", path: "/master/combo/", categoryId: 94, isAvailable: true },
                 { title: "DBR Machine", path: "/master/dbr-machine/", categoryId: 100, isAvailable: true },
-                { title: "Projects", path: "/master/projects/", categoryId: 107, isAvailable: true },
+                { title: "Projects", path: "/master/projects/", categoryId: 53, isAvailable: true },
             ],
         },
         {
@@ -194,6 +213,7 @@ export const getSidebarData = (IsGarmentSystem) => {
                 { title: "POS Day End", path: "/sales/pos-dayend/", categoryId: 96, isAvailable: true },
                 { title: "Shift Summary", path: "/sales/summary/", categoryId: 104, isAvailable: true },
                 { title: "Cash In/Out", path: "/sales/cash-in-out/", categoryId: 117, isAvailable: true },
+                { title: "Bank Payments", path: "/sales/bank-payments/", categoryId: 118, isAvailable: true },
             ],
         },
         {
