@@ -160,7 +160,9 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     if (values.IsWebView && values.AveragePrice === null) {
       toast.warning("Please enter the average price for web view.");
       return;
-    }    
+    }
+
+    
 
     const formData = new FormData();
 
@@ -185,7 +187,9 @@ export default function EditItems({ fetchItems, item, isPOSSystem, uoms, isGarme
     formData.append("HasSerialNumbers", values.HasSerialNumbers);
     formData.append("IsWebView", values.IsWebView);
     formData.append("ProductImage", selectedFile ? selectedFile : null);
-    formData.append("Description", values.Description && values.Description.trim() !== "" ? values.Description : null);
+    if (values.Description && values.Description.trim() !== "") {
+      formData.append("Description", values.Description);
+    }
 
     fetch(`${BASE_URL}/Items/UpdateItems`, {
       method: "POST",
